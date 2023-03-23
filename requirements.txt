@@ -1,5 +1,7 @@
 numpy
 pandas
 seaborn
-matplotlob
+matplotlib
+scikit-learn
+lightgbm
 #-e .
