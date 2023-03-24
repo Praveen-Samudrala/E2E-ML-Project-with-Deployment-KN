@@ -7,6 +7,7 @@ import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
+from src.components.data_transformation import DataTransformation
 
 @dataclass #Automatically initializes the special methods like __init__() under that class
 class DataIngestionConfig():
@@ -44,4 +45,7 @@ class DataIngestion():
 
 if __name__ == '__main__':
     obj = DataIngestion()
-    obj.initiate_dataingestion()
+    train_path, test_path = obj.initiate_dataingestion()
+
+    transformation_obj = DataTransformation()
+    train_df, test_df, preprocess_obj_path = transformation_obj.initiate_data_transformation(train_path, test_path)
