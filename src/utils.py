@@ -1,3 +1,9 @@
+'''
+This file contains common functionality such as saving object pickle files,etc
+This file and functions are called in data transformation and training scripts primarily.
+'''
+
+
 import os
 import sys
 import numpy as np
@@ -15,3 +21,4 @@ def save_object(file_path, object):
 
     except Exception as e:
         raise CustomException(e, sys)
+    

@@ -72,9 +72,12 @@ class DataTransformation:
             logging.info('Saved Preprocessor Object file to Disk!')
 
             # return transformed train, test and transformer pickle file path
-            return (train_preprocess,
-                    test_preprocess,
+            return (X_train_preprocess, Y_train_df,
+                    X_test_preprocess, Y_test_df,
                     self.data_transformation_config.preprocessor_object_filepath)
+            # return (train_preprocess,
+            #         test_preprocess,
+            #         self.data_transformation_config.preprocessor_object_filepath)
         
         except Exception as e:
             raise CustomException(e, sys)
