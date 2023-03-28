@@ -49,7 +49,6 @@ class ModelTrainer:
         
         except Exception as e:
             raise CustomException(e, sys)
-            
 
     def initiate_model_training(self, x_train_df, y_train_df, x_test_df, y_test_df):
         try:
